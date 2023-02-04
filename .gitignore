@@ -1,0 +1,41 @@
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+wp-content/uploads
+
+# ignore these plugins
+wp-content/plugins/hello.php
+
+# ignore specific themes
+wp-content/themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+
+.htaccess
+.well-known
+BingSiteAuth.xml
+crm
+error_log
+free_savings
+infotrust
+it_idol_new.zip
+it_idol_org_bkp.zip
+it_idol_org_bkp_171222
+itidoltechnologies.com
+pms.zip
+pms
+wp-config.php
+it_idol_bkp_040223
