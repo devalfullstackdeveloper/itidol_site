@@ -1,0 +1,25 @@
+.technologies_main{
+    .banner_tech{
+        &.htmlcss{
+        .bg_banner{
+            // background-image: url("../images/alltechnologies/htmlcss/Group 188.png"); 
+           
+        }
+        .outer_banner_text{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: flex-end;
+        .image_block{
+            // position: absolute;
+            // top: 90px;
+            img{
+                max-width: 148px;
+                object-fit: cover;
+            }
+        }
+    }
+    }
+}
+}

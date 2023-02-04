@@ -1,0 +1,87 @@
+.main_block {
+    .inner_main_block {
+        position: relative;
+        .about_use_main_page {
+            .inner_about_use {
+                .page_header_main {
+                    text-align: center;
+                }
+                .our_vision_block {
+                    .inner_our_block {
+                        position: relative;
+                        .blue_light_box {
+                            background-color: $blue_light_color;
+                            min-height: 150px;
+                            position: absolute;
+                            width: 75%;
+                            left: -157px;
+                            top: 197px;
+                            z-index: -1;
+                        }
+                        .left_vision_block {
+                            padding: 0 30px 0 0;
+                            .content_vision {
+                                p {
+                                    font-size: 20px;
+                                    line-height: 37px;
+                                    font-weight: $font_weight_500;
+                                    color: $darkgray_color;
+                                    letter-spacing: 0.6px;
+                                    margin-bottom: 0;
+                                    padding: 15px 0px;
+                                }
+                            }
+                        }
+                        .right_vision_block {
+                            img {
+                                border-radius: 0 100px;
+                            }
+                        }
+                    }
+                    &.our_approch {
+                        position: relative;
+                        .second_block {
+                            z-index: 999;
+                        }
+                    }
+                }
+                .tow_our_block {
+                    position: relative;
+                    .vertical_box {
+                        background-color: $blue_light_color;
+                        height: 1130px;
+                        width: 180px;
+                        position: absolute;
+                        bottom: -80px;
+                        z-index: -1;
+                    }
+                }
+            }
+            .contact_form {
+                &.section_spacing {
+                    padding: 70px 0 0 0;
+                }
+            }
+            .two_second_block {
+                position: relative;
+                .blue_light_box {
+                    background-color: $blue_light_color;
+                    min-height: 150px;
+                    position: absolute;
+                    width: 65%;
+                    left: auto;
+                    top: auto;
+                    z-index: -1;
+                    bottom: 40px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .main_block .inner_main_block .about_use_main_page .inner_about_use .our_vision_block .inner_our_block .left_vision_block {
+        padding: unset;
+    }
+}

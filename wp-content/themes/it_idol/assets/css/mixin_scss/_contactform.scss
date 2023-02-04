@@ -1,0 +1,306 @@
+.contact_form {
+    position: relative;
+    .inner_block_contact {
+        .form_outer {
+            max-width: 1000px;
+            margin: 0 auto;
+            .button_submit {
+                button {
+                    padding: 15px 114px;
+                    font-size: 18px;
+                }
+            }
+            .contact_label {
+                color: #1D3B4F;
+                padding: 5px;
+                font-size: 16px;
+            }
+            .form-control {
+                line-height: 2.3;
+                border: none;
+                &:focus {
+                    box-shadow: none;
+                    border: none;
+                    outline: none;
+                }
+            }
+            select.form-control {
+                line-height: 2.3;
+                border: none;
+                color: #8e959b;
+                &:focus {
+                    box-shadow: none;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+    .orange_belt {
+        background-color: $light_orange_color;
+        height: 50px;
+        width: 1300px;
+        position: absolute;
+        top: 35px;
+        right: 0;
+        z-index: -1;
+    }
+    #mfcf7_zl_multifilecontainer {
+        margin-top: 0;
+    }
+    .qbutton {
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        width: 100%;
+        line-height: 2.3;
+        text-align: left;
+        text-transform: capitalize;
+    }
+    .codedropz-upload-container {
+        padding: 10px 20px;
+        background-color: #fff;
+    }
+    .codedropz-upload-inner {
+        cursor: pointer;
+        h3 {
+            color: $skyblue_color;
+            font-size: 25px;
+        }
+        span {
+            color: $primary_color;
+        }
+    }
+    .cd-upload-btn {
+        color: $skyblue_color;
+    }
+    .codedropz-btn-wrap {
+        max-width: 156px;
+        margin: 0 auto;
+        padding: 6px;
+        border-radius: 8px;
+        background: $skyblue_color;
+        border: 1px solid transparent;
+        font-size: 16px;
+        a {
+            color: white;
+        }
+        &:hover {
+            border: 1px solid $skyblue_color;
+            background-color: $white;
+            a {
+                color: $skyblue_color;
+            }
+        }
+    }
+    .button,
+    button {
+        text-transform: capitalize;
+    }
+    .left_form_Sectiion.carrer {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            height: 450px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../images/career/anim.png");
+        }
+        .form_left_outer {
+            justify-content: end;
+            align-items: unset;
+            .inner_form_section {
+                text-align: right;
+            }
+        }
+    }
+    .left_form_Sectiion {
+        height: 100%;
+        position: relative;
+        .form_left_outer {
+            height: 100%;
+            background-color: #005289;
+            border-radius: 0px 0px 0px 310px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            .inner_form_section {
+                text-align: center;
+                z-index: 99;
+            }
+            .heading_one {
+                font-weight: 600;
+                font-size: 59.569px;
+                line-height: 76px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-bottom: 0;
+            }
+            .heading_two {
+                font-weight: 400;
+                font-size: 41.6983px;
+                line-height: 53px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-bottom: 0;
+            }
+            .heading_three {
+                font-weight: 400;
+                font-size: 41.6983px;
+                line-height: 53px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-bottom: 0;
+            }
+            .heading_four {
+                font-weight: 400;
+                font-size: 18.1145px;
+                line-height: 23px;
+                text-align: center;
+                opacity: 0.7;
+                color: #FFFFFF;
+                margin-bottom: 0;
+            }
+            .heading_five {
+                font-weight: 400;
+                font-size: 18.1145px;
+                line-height: 23px;
+                text-align: center;
+                margin-bottom: 0;
+                color: #FFFFFF;
+            }
+        }
+        .img_dote {
+            position: absolute;
+            left: 75px;
+            top: 29%;
+            z-index: 0;
+        }
+        .hexagone {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            background: #004E83;
+            height: 110px;
+            width: 125px;
+            position: absolute;
+            right: 121px;
+            top: 49%;
+        }
+        .hexagone_small {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            background: #004E83;
+            height: 69px;
+            width: 83px;
+            position: absolute;
+            left: 162px;
+            top: 12%;
+            transform: rotate(30deg);
+        }
+        .rectengal {
+            width: 194px;
+            height: 55px;
+            background: #004E83;
+            position: absolute;
+            bottom: 71px;
+            right: 0;
+            border-radius: 0 0 0 60px;
+        }
+    }
+    .form_detail {
+        background-color: $form_bg;
+        //box-shadow: $box_shadow;
+        padding: 60px 30px;
+    }
+    .tow_form_block {
+        padding-top: 70px;
+    }
+}
+
+.main_career_block {
+    .contact_form {
+        .inner_block_contact {
+            padding: 20px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact_form .left_form_Sectiion.carrer::after {
+        height: 375px !important;
+    }
+}
+
+#contact-form {
+    form {
+        position: relative;
+        .wpcf7-response-output {
+            border-color: #46b450;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0px;
+            max-width: 600px;
+            margin: 0 auto 90px;
+            text-align: center;
+            &.errormessge {
+                border-color: #f70000;
+                background-color: #f70000;
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                right: 0;
+                max-width: 600px;
+                margin: 0 auto 90px;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+        .button_submit.text-center {
+            margin-top: 75px;
+        }
+    }
+    .wpcf7-form.invalid .wpcf7-response-output {
+        background-color: red; //error
+        border: 1px solid red;
+    }
+}
+
+.currency_data {
+    position: relative;
+    .wpcf7-form-control-wrap {
+        &::after {
+            content: "\e64b";
+            font-family: 'themify';
+            position: absolute;
+            top: 50px;
+            color: $black;
+            right: 15px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .currency_data .wpcf7-form-control-wrap::after {
+        top: 40px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    #contact-form form .wpcf7-response-output {
+        bottom: 45px;
+    }
+}

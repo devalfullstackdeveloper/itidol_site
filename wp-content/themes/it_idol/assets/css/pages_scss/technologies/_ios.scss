@@ -1,0 +1,24 @@
+.technologies_main {
+    .banner_tech {
+        &.iOSnative {
+            .bg_banner {
+                // background-image: url("../images/alltechnologies/ios/Group 187.png"); 
+            }
+            .outer_banner_text {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                align-items: flex-end;
+                .image_block {
+                    // position: absolute;
+                    // top: 98px;
+                    img {
+                        max-width: 140px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

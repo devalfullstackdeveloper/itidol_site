@@ -1,0 +1,310 @@
+.inner_slider {
+
+	.bgimages_slide1 {
+		background-image: url("../images/home_page/slider/FASF 2.png");
+		height: 700px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.bgimages_slide2 {
+		background-image: url("../images/home_page/slider/FASF 1.png");
+		height: 700px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.bgimages_slide3 {
+		background-image: url("../images/home_page/slider/Group 2022.png");
+		height: 700px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	}
+
+	.bgimages_slide4 {
+		background-image: url("../images/home_page/slider/FASF 3.png");
+		height: 700px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+	:root {
+		--card-height: 40vw;
+		--card-margin: 4vw;
+		--card-top-offset: 1em;
+		--numcards: 4;
+		--outline-width: 0px;
+	}
+
+	#cards {
+		padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+		/* Make place at bottom, as items will slide to that position*/
+		margin-bottom: var(--card-margin);
+		/* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+	}
+
+	#card_1 {
+		--index: 1;
+	}
+
+	#card_2 {
+		--index: 2;
+	}
+
+	#card_3 {
+		--index: 3;
+	}
+
+	#card_4 {
+		--index: 4;
+	}
+
+	.card {
+		position: sticky;
+		top: 150px;
+		padding-top: calc(var(--index) * var(--card-top-offset));
+		border: none;
+	}
+
+	.card_one {
+		top: 170px;
+		position: sticky;
+	}
+
+	.card_two {
+		top: 190px;
+		position: sticky;
+	}
+
+	.card_three {
+		top: 210px;
+		position: sticky;
+	}
+
+	@supports (animation-timeline: works) {
+
+		@scroll-timeline cards-element-scrolls-in-body {
+			source: selector(body);
+			scroll-offsets:
+				/* Start when the start edge touches the top of the scrollport */
+				selector(#cards) start 1,
+				/* End when the start edge touches the start of the scrollport */
+				selector(#cards) start 0;
+			start: selector(#cards) start 1;
+			/* Start when the start edge touches the top of the scrollport */
+			end: selector(#cards) start 0;
+			/* End when the start edge touches the start of the scrollport */
+			time-range: 4s;
+		}
+
+		.card {
+			--index0: calc(var(--index) - 1);
+			/* 0-based index */
+			--reverse-index: calc(var(--numcards) - var(--index0));
+			/* reverse index */
+			--reverse-index0: calc(var(--reverse-index) - 1);
+			/* 0-based reverse index */
+		}
+
+		.card__content {
+			transform-origin: 50% 0%;
+			will-change: transform;
+
+			--duration: calc(var(--reverse-index0) * 1s);
+			--delay: calc(var(--index0) * 1s);
+
+			animation: var(--duration) linear scale var(--delay) forwards;
+			animation-timeline: cards-element-scrolls-in-body;
+		}
+
+		@keyframes scale {
+			to {
+				transform:
+					scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+			}
+		}
+	}
+
+	#debug {
+		position: fixed;
+		top: 1em;
+		left: 1em;
+	}
+
+	#debug::after {
+		content: " Show Debug";
+		margin-left: 1.5em;
+		color: white;
+		white-space: nowrap;
+	}
+
+	#debug:checked~main {
+		--outline-width: 1px;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+
+	header {
+		height: 100vh;
+		display: grid;
+		place-items: center;
+	}
+
+	#cards {
+		list-style: none;
+		outline: calc(var(--outline-width) * 10) solid blue;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(var(--numcards), var(--card-height));
+		gap: var(--card-margin);
+	}
+
+	.card {
+		outline: var(--outline-width) solid hotpink;
+		background-color: transparent;
+	}
+
+	figure>img {
+		height: 100%;
+
+		&.slide1_img {
+			max-width: 300px;
+			object-fit: contain;
+		}
+
+		&.slide2_img {
+			max-width: 460px;
+			object-fit: contain;
+			margin-top: 110px;
+		}
+
+		&.slide3_img {
+			max-width: 530px;
+			object-fit: contain;
+			margin-top: 0;
+		}
+
+		&.slide4_img {
+			max-width: 540px;
+			object-fit: contain;
+			margin-top: 110px;
+			position: absolute;
+			right: 49px;
+			top: -30px;
+		}
+
+		&.slide5_img {
+			max-width: 200px;
+			object-fit: contain;
+			position: absolute;
+			top: 120px;
+		}
+
+		&.slide6_img {
+			max-width: 200px;
+			object-fit: contain;
+			position: absolute;
+			left: 26%;
+			top: -95px;
+		}
+
+		&.slide7_img {
+			max-width: 200px;
+			object-fit: contain;
+			position: absolute;
+			left: 26%;
+			top: auto;
+			bottom: -350px;
+		}
+
+		&.slide8_img {
+			max-width: 200px;
+			object-fit: contain;
+			position: absolute;
+			left: 52%;
+			top: 125px;
+		}
+
+		&.slide9_img {
+			max-width: 310px;
+			object-fit: contain;
+			position: absolute;
+			right: 0;
+
+		}
+
+		&.slide10_img {
+			max-width: 678px;
+			object-fit: contain;
+			position: absolute;
+			top: 50px;
+			left: 0;
+
+		}
+	}
+
+	h1 {
+		font-weight: 300;
+		font-size: 3.5em;
+	}
+
+	h2 {
+		font-weight: 300;
+		font-size: 2.5em;
+	}
+
+	p {
+		font-family: sans-serif;
+		font-weight: 300;
+		line-height: 1.42;
+	}
+
+	.btn {
+		background: rgb(188 87 36);
+		color: rgb(255 255 255);
+		text-decoration: none;
+		display: inline-block;
+		padding: 0.5em;
+		border-radius: 0.25em;
+	}
+
+	aside {
+		width: 50vw;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	aside p {
+		margin-bottom: 1em;
+	}
+
+	.contetn_block {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		justify-content: center;
+		width: 100%;
+		button, .button{
+			cursor: pointer;
+          padding: 15px 30px;
+		  img{
+			max-width: 22px;
+			margin-left: 40px;
+			object-fit: cover;
+		  }
+		}
+
+	}
+}

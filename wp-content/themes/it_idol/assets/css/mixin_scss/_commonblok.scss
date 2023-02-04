@@ -1,0 +1,97 @@
+@import 'color';
+@import '../font_scss/font';
+
+body {
+    color: $white;
+    font-size: 16px;
+    letter-spacing: 0.49px;
+    margin: 0;
+    padding: 0;
+    font-family: $Rajdhani-Medium;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 130px;
+    margin: 0 auto;
+
+}
+
+a {
+    color: $darkgray_color;
+    cursor: pointer;
+
+    &.hover {
+        color: $logolight_color;
+    }
+
+    span {
+        &:hover {
+            color: $logolight_color;
+        }
+    }
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.main_heading {
+    h2 {
+        font-size: 80px;
+        font-weight: $font_weight_600;
+        line-height: 80px;
+        text-transform: uppercase;
+    }
+}
+
+.sub_heading {
+    p {
+        font-size: 29px;
+        font-weight: 500;
+        line-height: 35px;
+    }
+}
+
+.content_header {
+    h3 {
+        color: $skyblue_color;
+        font-weight: $font_weight_600;
+        font-size: 47px;
+
+    }
+}
+
+.pt80 {
+    padding-top: 80px;
+}
+
+.mt35 {
+    margin-top: 35px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.section_spacing {
+    padding: 70px 0;
+}
+
+.mt80 {
+    margin-top: 80px;
+}
+
+.page_header_main {
+
+
+    h3 {
+        color: $skyblue_color;
+        font-size: 55px;
+        line-height: 128px;
+        font-weight: $font_weight_600;
+    }
+}

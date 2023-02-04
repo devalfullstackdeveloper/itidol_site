@@ -1,0 +1,315 @@
+.main_block{
+    .inner_main_block{
+        .portfolio_outer{
+            background-color: $portfolio_bg_color;
+            // height: 100vh;
+            .up_block{
+                border-left: 5px solid $darksky_color;
+            }
+            .inner_block{ 
+            position: relative;
+                .page_block{
+                    display: flex;
+                    justify-content: center;
+                    .blue_line{
+                        width: 500px;
+                        background-color: $darksky_color;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        // height: 100vh;
+                    }
+                }
+         .upper_two_block{
+            position: relative;
+           
+            .logo_blog{
+                position: relative;
+                 padding-top: 113px;
+                .imge_block{
+                    min-height: 600px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $portfolio_bg_color;
+                    box-shadow: $box-shadow_one;
+                    position: relative;
+                    // margin-left: -63px;
+                    margin: 0 -24px 0 -65px;
+                    // margin-top: 113px;
+                img{
+                    max-width: 450px;
+                    object-fit: cover;
+                }
+                }
+                .mobile_number{
+                    top: 50%;
+                    position: absolute;
+                    right: -80px;
+                    transform: rotate(270deg);
+                   p{
+                    margin-bottom: 0;
+                   
+                   a{
+                    color: $darksky_color;
+                   
+                   }
+                   span{
+                    color: $darksky_color;
+                   }
+                   }
+                }
+            }
+        }
+
+       .recent_block {
+           .inner_recent_block{
+               position: relative;
+               .three_block{
+                   display: flex;
+                   justify-content: center;
+                   .first_block{
+                       z-index: 999;
+                       ul{
+                           padding-left: 0;
+                           li{
+                             margin: 20px;   
+                             list-style: none;
+                           }
+                       }
+                    .squre_block {
+                        .header_text{
+                            text-align: center;
+                            p{
+                                font-size: 64px;
+                                font-weight: $font_weight_600;
+                            }
+                        }
+                        .content_detail{
+                            text-align: center;
+                            padding: 15px;
+                            p{
+                             font-size: 19px;
+
+                            }
+                        }
+                    }
+                   }
+                  .secod_block {
+                      z-index: 999;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    ul{
+                        padding-left: 0;
+                        li{
+                          margin: 20px 20px 20px 0;   
+                          list-style: none;
+                        }
+                    }
+                   }
+
+                   .squre_block {
+                    max-width: 600px;
+                    background-color: $portfolio_bg_color;
+                    min-height: 310px;
+                    color: $darksky_color;
+                    box-shadow: $box-shadow_one;
+                   }
+               }
+              
+               .email_id{
+                position: absolute;
+                top: 50%;
+                bottom: 0;
+                left: -145px;
+                   p{
+                    color: $logolight_color;
+                    transform: rotate(270deg);
+                    font-size: 18px;
+                    font-weight: 600;
+                    background-color: $portfolio_bg_color;
+                    padding:  0 10px;
+                    margin-bottom: 0;
+                    -webkit-appearance: none;
+                    border-radius: 50px;
+                   }
+               }
+           }
+           
+        }
+       .explore_butn{
+                   text-align: center;
+                   margin-top: 40px;
+                   button{
+                    line-height: 0;
+                    border-radius: 0;
+                    font-weight: 600;
+                    font-size: 20px;
+                    padding: 25px 47px;
+                   }&.top{
+                       
+                        position: absolute;
+                        bottom: -66px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                   }
+               }
+    }
+
+    .responsive_block { 
+        padding-top: 90px;
+        position: relative;
+        .inner_responsive{
+            .imge_block{
+              background-image: url("../images/portfolio/responsive.png");
+              background-repeat: no-repeat;
+              position: relative;
+              margin: 0 -24px 0 -65px;
+              background-size: cover;
+              min-height: 750PX;
+              .responsive_contetn{
+                  padding: 15px;
+                  position: absolute;
+                  top: 78px;
+                  left: 78px;
+                  background-color: $darksky_color;
+                  max-width: 450px;
+                  min-height: 500px;
+              .inner_contetn{
+                  border: 1px solid $portfolio_bg_color;
+                  padding: 8px;
+                  .responsive_header{
+                      h3{
+                         font-size: 30px;
+                         font-weight: $font_weight_500;
+                         color: $portfolio_bg_color;
+                      }
+                  }
+                  .content_text_responsive{
+                      p{
+                       font-size: 16px;
+                      }
+                  }
+              }
+          }
+            }
+        } 
+          
+      }
+.blog_outer_section{
+    max-width: 100%;
+    width: 100%;
+    padding: 0 0 0 130px;
+    margin: 0 auto;
+   
+      .blog_design{
+        border-left: 5px solid $darksky_color;
+          position: relative;
+          .inner_blog{
+              .two_block{
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  .left_side{
+                    margin-left: -63px;
+                    .block_outer_design{
+                        position: relative;
+                        img{
+                            max-width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                  }
+                  .right_side{
+                      background-color: $darksky_color;
+                      padding: 78px 140px 78px 0;
+                      box-shadow: $box-shadow_one;
+                      .block_outer_design{
+                            height: 100%;
+                          .blog_detai_content{
+                              background-color: $portfolio_bg_color;
+                              height: 100%;
+                              box-shadow: $box-shadow_one;
+                              padding: 80px;
+                              .header{
+                                  padding-bottom: 45px;
+                                  h4{
+                                    color: $darksky_color;
+                                    font-size: 30px;
+                                    font-weight: $font_weight_600;
+                                  }
+                              }
+                              p{
+                                color: $darksky_color;
+                                font-size: 18px;
+                                line-height: 23px;
+                              }
+                          }
+                      }
+                  }
+              }
+        
+          }
+          .thanx_block{
+              position: relative;
+          .thanku_block{
+              display: flex;
+              justify-content: center;
+              padding-bottom: 50px;
+              margin-left: -130px;
+              .inner_thanku{
+                box-shadow: $box-shadow_one;
+                padding: 50px 75px;
+              .inner_block{
+                 text-align: center;
+                  h2{
+                     font-size: 85px;
+                     font-weight: $font_weight_600;
+                     color: $darksky_color;
+                  }
+              }
+              .social_block{
+                  text-align: center;
+                  ul{
+                      padding-left: 0;
+                      margin-bottom: 0;
+                      li{
+                          list-style: none;
+                          display: inline-block;
+                          margin-right: 9px;
+                          img{
+                              max-width: 40px;
+                          }
+                      }
+                  }
+              }
+            }
+          }
+          .email_id{
+            position: absolute;
+            top: 50%;
+            bottom: 0;
+            left: -145px;
+          p{
+           
+            transform: rotate(270deg);
+            font-size: 18px;
+            font-weight: 600;
+            background-color: $portfolio_bg_color;
+            padding:  0 10px;
+            margin-bottom: 0;
+            border-radius: 50px;
+            a{
+                color: $logolight_color;
+            }
+          }
+          }
+        }
+      }
+        }
+    }
+    }
+}

@@ -1,0 +1,26 @@
+.technologies_main{
+    .banner_tech{
+        &.nodejs{
+        .bg_banner{
+            // background-image: url("../images/alltechnologies/nodejs/Group 187.png"); 
+         
+        
+        }
+        .outer_banner_text{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: flex-end;
+        .image_block{
+            // position: absolute;
+            // top: 78px;
+            img{
+                max-width: 295px;
+                object-fit: cover;
+            }
+        }
+    }
+    }
+}
+}

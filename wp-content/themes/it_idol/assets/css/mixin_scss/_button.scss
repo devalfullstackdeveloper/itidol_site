@@ -1,0 +1,82 @@
+button,
+.button {
+    display: inline-block;
+    line-height: 0.9;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 10px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+}
+
+.btn-primary {
+    background-color: $skyblue_color;
+    border: 1px solid $transparent;
+    color: $white;
+
+    &:hover {
+        background-color: $white;
+        border: 1px solid $skyblue_color;
+        color: $skyblue_color;
+    }
+}
+
+.btn-secondary {
+    background-color: $white;
+    border: 1px solid $skyblue_color;
+    color: $skyblue_color;
+    font-weight: $font_weight_600;
+
+    &:hover {
+        background-color: $skyblue_color;
+        border: 1px solid $transparent;
+        color: $white;
+        font-weight: $font_weight_600;
+    }
+}
+
+
+.btn-light {
+    background-color: $white;
+    border: 1px solid $skyblue_color;
+    color: $skyblue_color;
+    font-weight: $font_weight_600;
+
+    &:hover {
+        background-color: $skyblue_color;
+        border: 1px solid $skyblue_color;
+        color: $white;
+        font-weight: $font_weight_600;
+    }
+}
+
+.btn-portfolio {
+    color: $darksky_color;
+    background-color: $portfolio_bg_color;
+    border: none;
+}
+
+.btn_readmore{
+    background-color: #049e42;
+    border: 1px solid #049e42;
+    color: $white;
+    font-weight: $font_weight_600;
+    &:hover {
+        background-color: $white;
+        border: 1px solid #049e42;
+        color: #049e42;
+        font-weight: $font_weight_600;
+    }
+}
+
+.btn-check:focus+.btn-secondary, .btn-secondary:focus {
+    color: none !important;
+    background-color: none !important;
+    border-color: none !important;
+    box-shadow: none !important;
+}

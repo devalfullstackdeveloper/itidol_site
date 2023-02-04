@@ -1,0 +1,30 @@
+.technologies_main{
+    .banner_tech{
+        &.android{
+        .bg_banner{
+            // background-image: url("../images/alltechnologies/android/Group 187.png"); 
+        
+        
+        }
+        .outer_banner_text{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: flex-end;
+        .image_block{
+            // position: absolute;
+            // top: 75px;
+            img{
+                max-width: 120px;
+                object-fit: cover;
+            }
+        }
+      
+    }
+    }
+
+}
+
+}
+
