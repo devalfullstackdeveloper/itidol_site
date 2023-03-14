@@ -1,12 +1,14 @@
 <?php
 /* Template Name: Home Template */
 get_header();
-$exploreUrlLink =  BASEURL.'/'.get_post_meta(get_the_ID(), 'explore_url', true);
+//$exploreUrlLink =  BASEURL.'/'.get_post_meta(get_the_ID(), 'explore_url', true);
 $baseurl=  home_url(); 
 
 $pageId = get_the_ID();
 $bannerAttachment = get_post_meta( $pageId, 'Banner_banner_image', true ); /* Banner Get Attachment Id */
 $bannerImage = wp_get_attachment_url( $bannerAttachment ); 
+$banner_videoAttachment = get_post_meta( $pageId, 'Banner_banner_video', true ); /* Banner Get Attachment Id */
+$banner_video_url = wp_get_attachment_url( $banner_videoAttachment ); 
 
 $service1Attachment = get_post_meta( $pageId, 'Service 1_service_image', true ); /* Service 1 Get Attachment Id */
 $service1Image = wp_get_attachment_url( $service1Attachment ); 
@@ -84,9 +86,13 @@ $angulrImage = wp_get_attachment_url( $angulrAttachment );
 ?>
 <!-- Banner section start -->
 <div class="banner_section_outer">
-  <div class="banner_top_images" style="background-image: url(<?php 
-    if($bannerImage)
-      echo $bannerImage; ?>);"></div>
+  <div class="banner_top_images">
+     <div class="banner_top_images"> 
+      <video controls class="banner_top_images"  loop="true" autoplay="autoplay" controls muted>
+        <source src="<?php  echo $banner_video_url; ?>" type="video/mp4">                      
+      </video> 
+     </div>
+      </div>
     <div class="banner_section">
         <div class="your_goals">
           <?php
@@ -103,142 +109,6 @@ $angulrImage = wp_get_attachment_url( $angulrAttachment );
   <div class="overlay d-md-none"></div>
 </div>
 <!-- Banner section end -->
-
-<!-- Card section start -->
-<!-- <div class="slider_section section_spacing"> -->
-<!--    <div class="inner_slider">
-          <main>
-            <ul id="cards">
-              <li class="card" id="card_1">
-                <div class=" row card__content bgimages_slide1 ">
-                  <div class="col-md-6 d-none d-md-block">
-                    <div class="contetn_block">
-                      <div data-aos="zoom-in-right" data-aos-duration="4000">
-                        <h2><?php echo get_post_meta(get_the_ID(), 'Crad 1_card_1_title', true); ?></h2>
-                        <p><?php echo get_post_meta(get_the_ID(), 'Crad 1_card_1_desc', true); ?></p>
-                        <a  href="<?php echo $exploreUrlLink; ?>" >
-                          <button class="button btn-light mt40" data-aos="fade-up" data-aos-duration="3000"><?php echo get_post_meta(get_the_ID(), 'explore_button', true); ?>
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                  <figure class="d-flex align-items-center h-100 w-100 justify-content-center">
-                    <?php if($card1Image){
-                      ?>
-                      <img class="img-fluid slide1_img" alt="Image description" data-aos="zoom-in-left" data-aos-duration="3000" src=<?php echo $card1Image; ?>>
-                      <?php if($card2Image){
-                        ?>
-                        <img class="img-fluid slide2_img" alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card2Image; ?>>
-                      <?php } }
-                      ?>                 
-                    </figure>
-                  </div>
-                </div>
-              </li>
-              <li class="card card_one" id="card_2">
-                <div class=" row card__content bgimages_slide2">
-                  <div class="col-md-6 d-none d-md-block">
-                    <div class="contetn_block">
-                      <div data-aos="zoom-in-right" data-aos-duration="4000">
-                        <h2><?php echo get_post_meta(get_the_ID(), 'Card 2_card_2_title', true); ?></h2>
-                        <p><?php echo get_post_meta(get_the_ID(), 'Card 2_card_2_desc', true); ?></p>
-                        <a  href="<?php echo $exploreUrlLink; ?>" >
-                          <button class="button btn-light mt40" data-aos="fade-up" data-aos-duration="3000"><?php echo get_post_meta(get_the_ID(), 'explore_button', true); ?>
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                  <figure class="d-flex block_section h-100 w-100 ">
-                    <?php if($card2Image_1){
-                      ?>
-                      <img class="img-fluid slide1_img" alt="Image description" data-aos="zoom-in-left" data-aos-duration="3000" src=<?php echo $card2Image_1; ?>>
-                      <?php if($card2Image_2){
-                        ?>
-                        <img class="img-fluid slide2_img" alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card2Image_2; ?>>
-                      <?php } }
-                      ?>    
-                    </figure>
-                  </div>
-                </div>
-              </li>
-              <li class="card card_two" id="card_3">
-                <div class=" row card__content bgimages_slide3">
-                  <div class="col-md-6 d-none d-md-block">
-                    <div class="contetn_block">
-                      <div data-aos="zoom-in-right" data-aos-duration="3000">
-                        <h2><?php echo get_post_meta(get_the_ID(), 'Card 3_card_3_title', true); ?></h2>
-                        <p><?php echo get_post_meta(get_the_ID(), 'Card 3_card_3_desc', true); ?></p>
-                        <a  href="<?php echo $exploreUrlLink; ?>" >
-                          <button class="button btn-light mt40" data-aos="fade-up" data-aos-duration="3000"><?php echo get_post_meta(get_the_ID(), 'explore_button', true); ?>
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-sm-12">
-                  <figure class="d-flex block_section position-relative h-100 w-100 overflow-hidden">
-                    <?php if($card3Image_1){
-                      ?>
-                      <img class="img-fluid slide5_img" 
-                      alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card3Image_1; ?>>
-                      <?php if($card3Image_2){
-                        ?>
-                        <img class="img-fluid slide6_img"
-                        alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card3Image_2; ?>>
-                        <?php if($card3Image_3){
-                          ?>
-                          <img class="img-fluid slide7_img"
-                          alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card3Image_3; ?>>
-                          <?php if($card3Image_4){
-                            ?>
-                            <img class="img-fluid slide8_img" alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card3Image_4; ?>>
-                          <?php } }}} ?>           
-                        </figure>
-                      </div>
-                    </div>
-              </li>
-                <li class="card card_three" id="card_4">
-                    <div class="row card__content bgimages_slide4">
-                      <div class="col-md-6  d-none d-md-block">
-                        <div class="contetn_block">
-                          <div data-aos="zoom-in-right" data-aos-duration="3000">
-                            <h2><?php echo get_post_meta(get_the_ID(), 'Card 4_card_4_title', true); ?></h2>
-                            <p><?php echo get_post_meta(get_the_ID(), 'Card 4_card_4_desc', true); ?></p>
-                            <a  href="<?php echo $exploreUrlLink; ?>" >
-                              <button class="button btn-light mt40" data-aos="fade-up" data-aos-duration="3000"><?php echo get_post_meta(get_the_ID(), 'explore_button', true); ?>
-                            </button>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                      <figure class="d-flex  position-relative h-100 w-100" data-aos="zoom-in-right"
-                      data-aos-duration="3000">
-                      <?php if($card4Image_1){
-                        ?>
-                        <img class="img-fluid slide10_img" 
-                        alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card4Image_1; ?> >
-                        <?php if($card4Image_2){
-                          ?>
-                          <img class="img-fluid slide9_img" 
-                          alt="Image description" data-aos="zoom-in-right" data-aos-duration="3000" src=<?php echo $card4Image_2; ?>>
-                        <?php } }
-                        ?>
-                      </figure>
-                    </div>
-                  </div>
-                </li>
-            </ul>
-          </main>
-        </div>
-  </div> -->
-  <!-- Card section end -->
-
   <!-- Service section start -->
   <div class="application_web section_spacing">
     <div class="inner_app_web">
