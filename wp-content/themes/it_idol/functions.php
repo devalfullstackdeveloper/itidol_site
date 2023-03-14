@@ -1398,24 +1398,6 @@ function members_skip_trash($post_id) {
 add_action('trashed_post', 'members_skip_trash');
 
 
-// function add_active_class_to_menu_item($classes, $item) {
-//     if (in_array('current-menu-item', $classes) ){
-//         $classes[] = 'active ';
-//     }
-//     return $classes;
-// }
-// add_filter('nav_menu_css_class' , 'add_active_class_to_menu_item' , 10 , 2);
-
-// add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
-
-// function add_active_class($classes, $item) {
-//   if( $item->menu_item_parent == 0 && in_array('current-menu-item', $classes) ) {
-//     $classes[] = "active";
-//   }
-
-//   return $classes;
-// }
-
 add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
 
 function add_active_class($classes, $item) {
@@ -1427,3 +1409,39 @@ function add_active_class($classes, $item) {
 
   return $classes;
 }
+
+function update_blog_slug( $args, $post_type ) {
+
+    if ( 'blog' === $post_type ) {
+
+        //$args['rewrite']['slug'] = 'presidentes';
+
+        $my_args = array(
+            'rewrite' => array( 'slug' => 'blog', 'with_front' => false )
+        );
+
+        return array_merge( $args, $my_args );
+    }
+
+    return $args;
+}
+
+add_filter( 'register_post_type_args', 'update_blog_slug', 10, 2 );
+
+function update_service_slug( $args, $post_type ) {
+
+    if ( 'service' === $post_type ) {
+
+        //$args['rewrite']['slug'] = 'presidentes';
+
+        $my_args = array(
+            'rewrite' => array( 'slug' => 'service', 'with_front' => false )
+        );
+
+        return array_merge( $args, $my_args );
+    }
+
+    return $args;
+}
+
+add_filter( 'register_post_type_args', 'update_service_slug', 10, 2 );
